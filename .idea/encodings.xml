@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Ionic/conFusion/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Ionic/conFusion/www/js/controllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Ionic/conFusion/www/js/services.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/aboutus.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/contactus.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/dishdetail.html" charset="UTF-8" />
