@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8742b71d-8e71-43e7-a661-c2f2ae929a0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/templates/reserve.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ionic/conFusion/www/templates/aboutus.html" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/templates/aboutus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/templates/favorites.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ionic/conFusion/www/js/app.js" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ionic/conFusion/www/js/controllers.js" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ionic/conFusion/www/templates/menu.html" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/templates/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ionic/conFusion/www/js/services.js" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ionic/conFusion/www/templates/sidebar.html" afterPath="$PROJECT_DIR$/Ionic/conFusion/www/templates/sidebar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="19" selection-start-line="44" selection-start-column="6" selection-end-line="52" selection-end-column="8" />
+              <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -53,18 +54,40 @@
         <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+              <caret line="264" column="8" selection-start-line="264" selection-start-column="8" selection-end-line="264" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/home.html">
+      <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.807692">
-              <caret line="44" column="10" selection-start-line="32" selection-start-column="4" selection-end-line="44" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.44424778">
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/js/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorites.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/favorites.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#h2#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +105,8 @@
       <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="14" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#h2#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
@@ -101,10 +124,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reserve.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reserve.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/reserve.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0530974">
+            <state vertical-scroll-proportion="-22.884615">
               <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
               <folding />
             </state>
@@ -119,19 +142,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Ionic/conFusion/www/js/services.js" />
         <option value="$PROJECT_DIR$/Ionic/conFusion/www/index.html" />
         <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/dishdetail.html" />
         <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/home.html" />
-        <option value="$PROJECT_DIR$/Ionic/conFusion/www/js/app.js" />
-        <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/menu.html" />
         <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/contactus.html" />
         <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/aboutus.html" />
         <option value="$USER_HOME$/Desktop/contactus.html" />
         <option value="$USER_HOME$/Desktop/aboutus.html" />
-        <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/sidebar.html" />
         <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/reserve.html" />
+        <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/menu.html" />
+        <option value="$PROJECT_DIR$/Ionic/conFusion/www/js/services.js" />
+        <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/favorites.html" />
+        <option value="$PROJECT_DIR$/Ionic/conFusion/www/js/app.js" />
         <option value="$PROJECT_DIR$/Ionic/conFusion/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/Ionic/conFusion/www/templates/sidebar.html" />
       </list>
     </option>
   </component>
@@ -411,7 +435,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453996761701</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" Ionic Modals and Forms. Create form for reservation table.">
+      <created>1454068160727</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1454068160727</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +477,8 @@
     <MESSAGE value="Add services and controllers from previous course and include it in Ionic application. Start design home page." />
     <MESSAGE value="Design menu page and dish detail page" />
     <MESSAGE value="Assignment 1.&#10;Update the Contact Us page to show the address and the three buttons like a button-bar with ionic icon.&#10; Update the About Us page to show the history and list of corporate leaders of the restaurant." />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 1.&#10;Update the Contact Us page to show the address and the three buttons like a button-bar with ionic icon.&#10; Update the About Us page to show the history and list of corporate leaders of the restaurant." />
+    <MESSAGE value=" Ionic Modals and Forms. Create form for reservation table." />
+    <option name="LAST_COMMIT_MESSAGE" value=" Ionic Modals and Forms. Create form for reservation table." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -474,14 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -544,16 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#h2#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/contactus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693">
@@ -578,18 +591,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/sidebar.html">
+    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/reserve.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state vertical-scroll-proportion="-22.884615">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h2#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/favorites.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h2#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="19" selection-start-line="44" selection-start-column="6" selection-end-line="52" selection-end-column="8" />
+          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -597,15 +638,15 @@
     <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+          <caret line="264" column="8" selection-start-line="264" selection-start-column="8" selection-end-line="264" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/reserve.html">
+    <entry file="file://$PROJECT_DIR$/Ionic/conFusion/www/templates/sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0530974">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.44424778">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding />
         </state>
       </provider>
