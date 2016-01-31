@@ -44,27 +44,27 @@ angular.module('conFusion.controllers', [])
     // Create the reserve modal that we will use later
     $ionicModal.fromTemplateUrl('templates/reserve.html', {
       scope: $scope
-    }).then(function(modal) {
+    }).then(function (modal) {
       $scope.reserveform = modal;
     });
 
     // Triggered in the reserve modal to close it
-    $scope.closeReserve = function() {
+    $scope.closeReserve = function () {
       $scope.reserveform.hide();
     };
 
     // Open the reserve modal
-    $scope.reserve = function() {
+    $scope.reserve = function () {
       $scope.reserveform.show();
     };
 
     // Perform the reserve action when the user submits the reserve form
-    $scope.doReserve = function() {
+    $scope.doReserve = function () {
       console.log('Doing reservation', $scope.reservation);
 
       // Simulate a reservation delay. Remove this and replace with your reservation
       // code if using a server system
-      $timeout(function() {
+      $timeout(function () {
         $scope.closeReserve();
       }, 1000);
     };
@@ -223,18 +223,24 @@ angular.module('conFusion.controllers', [])
     console.log($scope.leaders);
   }])
 
-  .controller('FavoritesController', ['$scope', 'menuFactory', 'favoriteFactory', 'baseURL', '$ionicListDelegate', function ($scope, menuFactory, favoriteFactory, baseURL, $ionicListDelegate) {
+  .controller('FavoritesController', ['$scope', 'menuFactory', 'favoriteFactory', 'baseURL', '$ionicListDelegate', '$ionicPopup', '$ionicLoading', function ($scope, menuFactory, favoriteFactory, baseURL, $ionicListDelegate, $ionicPopup, $ionicLoading) {
 
     $scope.baseURL = baseURL;
     $scope.shouldShowDelete = false;
 
     $scope.favorites = favoriteFactory.getFavorites();
 
+    $ionicLoading.show({
+      template: '<ion-spinner></ion-spinner> Loading...'
+    });
+
     $scope.dishes = menuFactory.getDishes().query(
       function (response) {
         $scope.dishes = response;
+        $ionicLoading.hide();
       },
       function (response) {
+        $ionicLoading.hide();
         $scope.message = "Error: " + response.status + " " + response.statusText;
       });
     console.log($scope.dishes, $scope.favorites);
@@ -246,10 +252,24 @@ angular.module('conFusion.controllers', [])
 
     $scope.deleteFavorite = function (index) {
 
-      favoriteFactory.deleteFromFavorites(index);
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Confirm Delete',
+        template: 'Are you sure you want to delete this item?'
+      });
+
+      confirmPopup.then(function (res) {
+        if (res) {
+          console.log('Ok to delete');
+          favoriteFactory.deleteFromFavorites(index);
+        } else {
+          console.log('Canceled delete');
+        }
+      });
+
       $scope.shouldShowDelete = false;
 
-    }}])
+    }
+  }])
 
   .filter('favoriteFilter', function () {
     return function (dishes, favorites) {
@@ -262,7 +282,8 @@ angular.module('conFusion.controllers', [])
       }
       return out;
 
-    }});
+    }
+  })
 
 
 ;
