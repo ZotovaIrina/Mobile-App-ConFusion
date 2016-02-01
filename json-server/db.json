@@ -40,34 +40,16 @@
           "date": "2011-12-02T17:57:28.556094Z"
         },
         {
-          "rating": 5,
-          "comment": "",
-          "author": "",
-          "date": "2015-12-21T15:18:39.060Z"
+          "rating": "1",
+          "name": "aaaa",
+          "comment": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "date": "2016-02-01T12:36:53.716Z"
         },
         {
-          "rating": 5,
-          "comment": "",
-          "author": "",
-          "date": "2015-12-21T15:19:28.067Z"
-        },
-        {
-          "rating": 5,
-          "comment": "",
-          "author": "",
-          "date": "2015-12-21T15:20:02.891Z"
-        },
-        {
-          "rating": 5,
-          "comment": "",
-          "author": "",
-          "date": "2015-12-21T15:23:00.514Z"
-        },
-        {
-          "rating": "3",
-          "comment": "Comment",
-          "author": "Irina",
-          "date": "2015-12-21T15:32:02.798Z"
+          "rating": "2",
+          "name": "ddd",
+          "comment": "dddddddddddddd",
+          "date": "2016-02-01T12:37:08.490Z"
         }
       ]
     },

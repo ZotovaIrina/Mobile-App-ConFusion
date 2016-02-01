@@ -155,10 +155,11 @@ angular.module('conFusion.controllers', [])
     };
   }])
 
-  .controller('DishDetailController', ['$scope', '$stateParams', 'menuFactory', 'baseURL', function ($scope, $stateParams, menuFactory, baseURL) {
+  .controller('DishDetailController', ['$scope', '$stateParams', 'menuFactory', 'baseURL', '$ionicPopover', 'favoriteFactory', '$ionicModal', function ($scope, $stateParams, menuFactory, baseURL, $ionicPopover, favoriteFactory, $ionicModal) {
 
     $scope.baseURL = baseURL;
     $scope.dish = {};
+    $scope.comment = {};
     $scope.showDish = false;
     $scope.message = "Loading ...";
 
@@ -173,26 +174,68 @@ angular.module('conFusion.controllers', [])
       }
     );
 
+    $ionicPopover.fromTemplateUrl('templates/dish-detail-popover.html', {
+      scope: $scope
+    }).then(function (popover) {
+      $scope.popover = popover;
+    });
 
-  }])
+    $scope.optionPopover = function ($event) {
+      $scope.popover.show($event);
+    };
 
-  .controller('DishCommentController', ['$scope', 'menuFactory', function ($scope, menuFactory) {
+    $scope.addFavorite = function (index) {
+      console.log("index is " + index);
+      favoriteFactory.addToFavorites(index);
+      $scope.popover.hide();
+    };
 
-    $scope.mycomment = {rating: 5, comment: "", author: "", date: ""};
+    $ionicModal.fromTemplateUrl('templates/dish-comment.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
 
-    $scope.submitComment = function () {
+    $scope.openComment = function () {
+      $scope.modal.show();
+      $scope.popover.hide();
+    };
 
-      $scope.mycomment.date = new Date().toISOString();
-      console.log($scope.mycomment);
+    $scope.closeComment = function () {
+      $scope.modal.hide();
+    };
 
-      $scope.dish.comments.push($scope.mycomment);
+    $scope.doComment = function () {
+      $scope.comment.date = new Date().toISOString();
+      console.log($scope.comment);
+      $scope.dish.comments.push($scope.comment);
+      console.log($scope.dish.comments);
       menuFactory.getDishes().update({id: $scope.dish.id}, $scope.dish);
+      $scope.comment = {};
+      $scope.modal.hide();
 
-      $scope.commentForm.$setPristine();
+    };
 
-      $scope.mycomment = {rating: 5, comment: "", author: "", date: ""};
-    }
   }])
+
+  //.controller('DishCommentController', ['$scope', 'menuFactory', function ($scope, menuFactory) {
+  //
+  //  $scope.mycomment = {rating: 5, comment: "", author: "", date: ""};
+  //
+  //  $scope.submitComment = function () {
+  //
+  //    $scope.mycomment.date = new Date().toISOString();
+  //    console.log($scope.mycomment);
+  //
+  //    $scope.dish.comments.push($scope.mycomment);
+  //    menuFactory.getDishes().update({id: $scope.dish.id}, $scope.dish);
+  //
+  //    $scope.commentForm.$setPristine();
+  //
+  //    $scope.mycomment = {rating: 5, comment: "", author: "", date: ""};
+  //  }
+  //}])
 
   // implement the IndexController and About Controller here
 
