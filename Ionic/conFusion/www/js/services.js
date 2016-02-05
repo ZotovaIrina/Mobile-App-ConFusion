@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('conFusion.services', ['ngResource'])
-  .constant("baseURL", "http://localhost:3000/")
+  .constant("baseURL", "http://192.168.0.101:3000/")
   .factory('menuFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
     return $resource(baseURL + "dishes/:id", null, {
@@ -31,31 +31,68 @@ angular.module('conFusion.services', ['ngResource'])
 
   }])
 
-  .factory('favoriteFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
+  .factory('favoriteFactory', ['$localStorage', function ($localStorage) {
     var favFac = {};
-    var favorites = [];
+    var array = $localStorage.getObject("favorites", "[]");
 
     favFac.addToFavorites = function (index) {
-      for (var i = 0; i < favorites.length; i++) {
-        if (favorites[i].id == index)
-          return;
+
+
+       var newValue = {id: index};
+
+      //check exist favorites array in the local storage or not
+      if (array.length !== 0) {
+
+        for (var i = 0; i < array.length; i++) {
+          if (array[i].id == index) {
+            console.log("this id already exists");
+            return;
+          }
+        }
+        array.push(newValue);
+        console.log("new favorites array", array);
+        $localStorage.storeObject("favorites", array);
       }
-      favorites.push({id: index});
+      else {
+        console.log("local storage was empty");
+        array.push(newValue);
+        $localStorage.storeObject("favorites", array);
+      }
+
     };
 
     favFac.deleteFromFavorites = function (index) {
-      for (var i = 0; i < favorites.length; i++) {
-        if (favorites[i].id == index) {
-          favorites.splice(i, 1);
+
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].id == index) {
+          array.splice(i, 1);
+          $localStorage.storeObject("favorites", array);
         }
       }
     };
 
     favFac.getFavorites = function () {
-      return favorites;
+      return $localStorage.getObject("favorites", "[]");
     };
 
     return favFac;
+  }])
+
+  .factory('$localStorage', ['$window', function ($window) {
+    return {
+      store: function (key, value) {
+        $window.localStorage[key] = value;
+      },
+      get: function (key, defaultValue) {
+        return $window.localStorage[key] || defaultValue;
+      },
+      storeObject: function (key, value) {
+        $window.localStorage[key] = JSON.stringify(value);
+      },
+      getObject: function (key, defaultValue) {
+        return JSON.parse($window.localStorage[key] || defaultValue);
+      }
+    }
   }])
 
 ;
