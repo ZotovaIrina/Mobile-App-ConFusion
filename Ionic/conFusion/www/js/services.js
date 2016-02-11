@@ -31,52 +31,36 @@ angular.module('conFusion.services', ['ngResource'])
 
   }])
 
-  .factory('favoriteFactory', ['$localStorage', function ($localStorage) {
+  .factory('favoriteFactory', ['$resource', 'baseURL', '$localStorage', function ($resource, baseURL, $localStorage) {
     var favFac = {};
-    var array = $localStorage.getObject("favorites", "[]");
-
-    favFac.addToFavorites = function (index) {
-
-
-       var newValue = {id: index};
-
-      //check exist favorites array in the local storage or not
-      if (array.length !== 0) {
-
-        for (var i = 0; i < array.length; i++) {
-          if (array[i].id == index) {
-            console.log("this id already exists");
-            return;
-          }
-        }
-        array.push(newValue);
-        console.log("new favorites array", array);
-        $localStorage.storeObject("favorites", array);
-      }
-      else {
-        console.log("local storage was empty");
-        array.push(newValue);
-        $localStorage.storeObject("favorites", array);
-      }
-
-    };
+    var favorites = $localStorage.getObject('favorites', '[]');
 
     favFac.deleteFromFavorites = function (index) {
-
-      for (var i = 0; i < array.length; i++) {
-        if (array[i].id == index) {
-          array.splice(i, 1);
-          $localStorage.storeObject("favorites", array);
+      for (var i = 0; i < favorites.length; i++) {
+        if (favorites[i].id == index) {
+          favorites.splice(i, 1);
         }
       }
+      $localStorage.storeObject('favorites', favorites);
+    };
+
+    favFac.addToFavorites = function (index) {
+      for (var i = 0; i < favorites.length; i++) {
+        if (favorites[i].id == index)
+          return;
+      }
+      favorites.push({id: index});
+      console.log('favorites added', favorites);
+      $localStorage.storeObject('favorites', favorites);
     };
 
     favFac.getFavorites = function () {
-      return $localStorage.getObject("favorites", "[]");
+      return favorites;
     };
-
     return favFac;
   }])
+
+
 
   .factory('$localStorage', ['$window', function ($window) {
     return {

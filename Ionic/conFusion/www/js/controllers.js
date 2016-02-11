@@ -244,13 +244,9 @@ angular.module('conFusion.controllers', [])
 
       $scope.baseURL = baseURL;
       $scope.shouldShowDelete = false;
-      $scope.getFavorites = function () {
-        return favoriteFactory.getFavorites();
-      };
+      $scope.favorites = favorites;
 
       $scope.dishes = dishes;
-
-      console.log($scope.dishes, $scope.favorites);
 
       $scope.toggleDelete = function () {
         $scope.shouldShowDelete = !$scope.shouldShowDelete;
