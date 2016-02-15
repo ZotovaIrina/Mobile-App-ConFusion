@@ -22,7 +22,7 @@ angular.module('conFusion', ['ionic', 'ngCordova', 'conFusion.controllers','conF
 
       $timeout(function(){
         $cordovaSplashscreen.hide();
-      },4000);
+      },2000);
 
     });
 
